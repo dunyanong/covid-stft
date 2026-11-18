@@ -1,10 +1,12 @@
+from pathlib import Path
 #https://stackoverflow.com/questions/25735153/plotting-a-fast-fourier-transform-in-python
 from scipy.fftpack import fft
 from scipy.fft import rfftn
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-data=pd.read_csv('d.csv')
+DATA = Path(__file__).resolve().parent.parent / "data" / "d.csv"
+data=pd.read_csv(DATA)
 # Number of samplepoints
 y = data['us']
 N = len(y)

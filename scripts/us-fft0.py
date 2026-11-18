@@ -1,8 +1,10 @@
+from pathlib import Path
 import numpy as np
 from scipy.fftpack import fft
 import pandas as pd
 import numpy as np
-data=pd.read_csv("d.csv")
+DATA = Path(__file__).resolve().parent.parent / "data" / "d.csv"
+data=pd.read_csv(DATA)
 import matplotlib.pyplot as plt
 peak=200
 y=data["us"][len(data)-peak:len(data)]
